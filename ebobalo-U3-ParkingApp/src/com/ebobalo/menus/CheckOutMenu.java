@@ -4,9 +4,9 @@ import com.ebobalo.Controller;
 
 import java.util.Scanner;
 
-public class CheckOut {
+public class CheckOutMenu {
 
-    private CheckOut(){}
+    private CheckOutMenu(){}
 
     /***
      * checkOutMachineMenu method contain a while to check proper input and navigate user to the selected option

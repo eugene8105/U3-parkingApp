@@ -7,7 +7,7 @@ import java.util.Scanner;
 /***
  * Menu class will point a user to a check in or check out machine.
  */
-public class Menu {
+public class MainMenu {
     /***
      * machineSelection method contain a while to check proper input and navigate user to the selected option
      */
@@ -33,11 +33,11 @@ public class Menu {
                 switch (choice) {
                     case 1:
                         // 1 - Check/In menu
-                        CheckIn.checkInMachineMenu();
+                        CheckInMenu.checkInMachineMenu();
                         break;
                     case 2:
                         // 2 - Check/Out menu
-                        CheckOut.checkOutMachineMenu();
+                        CheckOutMenu.checkOutMachineMenu();
                         break;
                     case 3:
                         // 5 - Exit

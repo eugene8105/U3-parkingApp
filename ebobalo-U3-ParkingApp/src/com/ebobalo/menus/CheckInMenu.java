@@ -4,7 +4,7 @@ import com.ebobalo.Controller;
 
 import java.util.Scanner;
 
-public class CheckIn {
+public class CheckInMenu {
 
     /***
      * checkInMachineMenu method contain a while to check proper input and navigate user to the selected option

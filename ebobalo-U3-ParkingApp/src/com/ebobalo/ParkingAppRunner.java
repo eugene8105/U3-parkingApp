@@ -1,9 +1,6 @@
 package com.ebobalo;
 
-import com.ebobalo.factories.FeeFactory;
-import com.ebobalo.menus.Menu;
-
-import java.util.Scanner;
+import com.ebobalo.menus.MainMenu;
 
 public class ParkingAppRunner {
 
@@ -30,7 +27,7 @@ public class ParkingAppRunner {
 //
 //        }
         try {
-            Menu.machineSelection();
+            MainMenu.machineSelection();
         } catch (InterruptedException e) {
             System.out.println("Something went wrong in machine selection menu.");
             System.out.println(e.getMessage());
