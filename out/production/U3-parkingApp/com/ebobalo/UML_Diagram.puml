@@ -1,0 +1,40 @@
+@startuml
+skinparam classHeaderBackgroundColor orange
+
+
+class ParkingGarageRunner{
+}
+
+class Client{
+}
+
+class FeeFactory{
+}
+
+
+class LostTicket{
+}
+
+class SpecialEvent{
+}
+
+class MinMax{
+}
+
+class CheckIn{
+}
+
+class CheckOut{
+}
+
+class Menu{
+}
+
+FeeFactory <|-- ParkingGarageRunner
+Client <-- LostTicket
+Client <-- SpecialEvent
+Client <-- MinMax
+note left : extends \n client class
+
+
+@enduml

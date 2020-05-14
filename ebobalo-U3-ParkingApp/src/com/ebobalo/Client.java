@@ -6,6 +6,14 @@ import java.time.LocalDateTime;
 public class Client implements Serializable {
 
     public static int idGenerator = 1;
+
+    /***
+     * Using Strategy pattern
+     */
+    ISpecialEvent feeSpecs;
+    IMinMax minMax;
+    ILostTicket lostTick;
+
     // client ID
     private  int ticketId;
     public int getTicketId() {

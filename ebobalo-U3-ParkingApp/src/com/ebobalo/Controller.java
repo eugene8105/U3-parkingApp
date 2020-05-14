@@ -35,7 +35,7 @@ public class Controller{
     List<Client> clientList = new ArrayList<Client>();
     private Controller(){
         clientList = FileReader.readClientFile(fileName);
-        System.out.println();
+        System.out.println(clientList.size());
     }
 
     public static Controller getInstance(){

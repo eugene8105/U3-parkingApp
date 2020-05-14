@@ -1,0 +1,34 @@
+@startuml
+skinparam classHeaderBackgroundColor orange
+
+class testClass1{
+-int num1 private
+#int num2 protected
++int num3 public
+--
+int num4
+..
+int num5
+.. Strings..
+string name
+string country
+method()
+}
+
+class testClass{
+int num1
+int num2
+method()
+}
+
+class class1{
+}
+
+testClass <|-- class1
+testClass *-- class2
+testClass o-- class3
+testClass <-- class4
+
+note left : class4 is \n test class
+
+@enduml

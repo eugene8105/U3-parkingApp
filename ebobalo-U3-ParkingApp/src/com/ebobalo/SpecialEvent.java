@@ -1,15 +1,15 @@
 package com.ebobalo;
 
-public class SpecialEvent extends Client {
+import java.io.Serializable;
+
+public class SpecialEvent implements ISpecialEvent, Serializable {
 
     final static double SPECIAL_EVENT_FEE = 20.00;
 
     final static boolean ITS_SPECIAL = true;
 
-    public SpecialEvent(){
-        setFeeSpecification("Special Event.");
-        setIsSpecial(ITS_SPECIAL);
-        setCharged(SPECIAL_EVENT_FEE);
-    } // end of SpecialEvent constructor
-
-} // end of SpecialEvent class
+    @Override
+    public String Specification() {
+        return "Special Event.";
+    }
+}

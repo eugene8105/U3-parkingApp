@@ -25,7 +25,7 @@ public class GarageUtilities{
         inTime = LocalDateTime.now();
         return inTime;
     }
-    // returns a number of min was parked.
+    // returns a number of minutes was parked.
     static long calcParkedTime(LocalDateTime tOut, LocalDateTime tIn){ // int minParked, LocalDateTime inTime
 
         long minutes = ChronoUnit.MINUTES.between(tIn, tOut);

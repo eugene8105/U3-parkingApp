@@ -1,9 +1,9 @@
 package com.ebobalo.factories;
 
 import com.ebobalo.Client;
-import com.ebobalo.LostTicket;
-import com.ebobalo.MinMax;
-import com.ebobalo.SpecialEvent;
+import com.ebobalo.LostTicketSetUp;
+import com.ebobalo.MinMaxSetUp;
+import com.ebobalo.SpecialEventSetUp;
 
 public class FeeFactory {
 
@@ -35,17 +35,17 @@ public class FeeFactory {
 
         if (newClientFee.equals("l")){
             /***
-             *  decided to do a Singleton for LostTicket class.
+             *  decided to do a Singleton for LostTicketSetUp class.
              */
-            return LostTicket.getInstance();
+            return LostTicketSetUp.getInstance();
 
         } else if(newClientFee.equals("s")){
 
-            return new SpecialEvent();
+            return new SpecialEventSetUp();
 
         } else if(newClientFee.equals("m")){
 
-            return new MinMax();
+            return new MinMaxSetUp();
 
         } else{
             return null;
