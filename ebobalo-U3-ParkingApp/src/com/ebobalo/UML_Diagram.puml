@@ -2,39 +2,53 @@
 skinparam classHeaderBackgroundColor orange
 
 
-class ParkingGarageRunner{
-}
+class ParkingGarageRunner{}
 
-class Client{
-}
+class Client{}
 
-class FeeFactory{
-}
+class MainMenu{}
+class CheckOutMenu{}
+class CheckInMenu{}
 
+class Controller{}
+class FeeFactory{}
 
-class LostTicket{
-}
+class ILostTicket{}
+class LostTicket{}
+class LostTicketSetUp{}
 
-class SpecialEvent{
-}
+class ISpecialEvent{}
+class SpecialEventSetUp{}
+class SpecialEvent{}
 
-class MinMax{
-}
+class IMinMax{}
+class MinMax{}
+class MinMaxSetUp{}
 
-class CheckIn{
-}
+ParkingGarageRunner --|> MainMenu
 
-class CheckOut{
-}
+MainMenu --|> CheckInMenu
+MainMenu --|> CheckOutMenu
 
-class Menu{
-}
+CheckInMenu --|> Controller
+CheckOutMenu --|> Controller
 
-FeeFactory <|-- ParkingGarageRunner
-Client <-- LostTicket
-Client <-- SpecialEvent
-Client <-- MinMax
-note left : extends \n client class
+Controller --|> FeeFactory
+
+FeeFactory --|> Client
+
+Client --> ILostTicket
+Client --> ISpecialEvent
+Client --> IMinMax
+
+ILostTicket --> LostTicket
+LostTicket <--> LostTicketSetUp
+
+ISpecialEvent --> SpecialEvent
+SpecialEvent <--> SpecialEventSetUp
+
+IMinMax --> MinMax
+MinMax <--> MinMaxSetUp
 
 
 @enduml
